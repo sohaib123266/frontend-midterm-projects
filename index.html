@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Text Editor</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="editor">
+      <h2>Text Editor</h2>
+
+      <!-- Font Size -->
+      <div class="tools">
+        <button onclick="fontSize(2)">A+</button>
+
+        <button onclick="fontSize(-2)">A-</button>
+
+        <!-- Bold -->
+        <button onclick="fontWeight()">
+          <b>B</b>
+        </button>
+
+        <!-- Italic -->
+        <button onclick="fontItalic()">
+          <i>I</i>
+        </button>
+
+        <!-- Underline -->
+        <button onclick="fontUnderline()">
+          <u>U</u>
+        </button>
+
+        <!-- Text Align -->
+        <button onclick="changeAlign('left')">Left</button>
+
+        <button onclick="changeAlign('center')">Center</button>
+
+        <button onclick="changeAlign('right')">Right</button>
+      </div>
+
+      <!-- Colors -->
+      <div class="colors">
+        <label>
+          Text Color
+
+          <input type="color" oninput="changeColor(this.value)" />
+        </label>
+
+        <label>
+          Background
+
+          <input type="color" oninput="changeBackground(this.value)" />
+        </label>
+      </div>
+
+      <!-- Text -->
+      <p id="par">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum corporis
+        officia temporibus modi vero ratione sint sit tempore similique
+        voluptate, laboriosam commodi amet delectus molestias voluptas.
+      </p>
+
+      <!-- Extra Controls -->
+      <div class="extra-tools">
+        <button onclick="resetText()" class="reset">Reset</button>
+
+        <button onclick="hideText()">Hide / Show</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
