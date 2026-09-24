@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Raido Travel</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       NAVBAR
+  ========================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark raido-navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand raido-logo" href="#"> Raido. </a>
+
+        <!-- Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center raido-nav-links">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about"> About Us </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Discover </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Blog </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Journals </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Gallery </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- Search Icon -->
+          <a href="#" class="search-icon ms-lg-3" aria-label="Search">
+            &#128269;
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =========================
+       ABOUT SECTION
+  ========================== -->
+
+    <section class="about-section" id="about">
+      <div class="container-fluid px-0">
+        <div class="row g-0 align-items-stretch">
+          <!-- =====================
+             LEFT SIDE
+        ====================== -->
+
+          <div class="col-12 col-lg-6 about-left">
+            <div class="about-content">
+              <h1>About Us</h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+
+              <!-- =====================
+                 STATISTICS
+            ====================== -->
+
+              <div class="row g-0 stats-box">
+                <div class="col-4 stat-item">
+                  <h2>268</h2>
+
+                  <span> Completed Trips </span>
+                </div>
+
+                <div class="col-4 stat-item">
+                  <h2>176</h2>
+
+                  <span> Tour Guides </span>
+                </div>
+
+                <div class="col-4 stat-item">
+                  <h2>153</h2>
+
+                  <span> Destinations </span>
+                </div>
+              </div>
+
+              <!-- =====================
+                 READ MORE BUTTON
+            ====================== -->
+
+              <a href="#" class="read-more-btn">
+                <span> Read More </span>
+
+                <span class="arrow"> &rarr; </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- =====================
+             RIGHT SIDE
+        ====================== -->
+
+          <div class="col-12 col-lg-6 about-right">
+            <div class="slider">
+              <!-- Slide 1 -->
+              <div class="slide active">
+                <img src="images/bridge.jpg" alt="Travel image" />
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="images/bridge.jpg" alt="Travel image" />
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="images/bridge.jpg" alt="Travel image" />
+              </div>
+
+              <!-- =====================
+                 SLIDER DOTS
+            ====================== -->
+
+              <div class="slider-dots">
+                <button
+                  class="dot active"
+                  type="button"
+                  data-index="0"
+                  aria-label="Slide 1"
+                ></button>
+
+                <button
+                  class="dot"
+                  type="button"
+                  data-index="1"
+                  aria-label="Slide 2"
+                ></button>
+
+                <button
+                  class="dot"
+                  type="button"
+                  data-index="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

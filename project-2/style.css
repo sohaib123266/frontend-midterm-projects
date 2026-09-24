@@ -1,0 +1,608 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+
+  font-family: Arial, sans-serif;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.raido-navbar {
+  background: #1d2230;
+
+  min-height: 85px;
+
+  padding: 0;
+}
+
+.raido-navbar .container {
+  min-height: 85px;
+}
+
+/* Logo */
+
+.raido-logo {
+  color: white !important;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+/* Navbar Links */
+
+.raido-nav-links {
+  gap: 28px;
+}
+
+.raido-nav-links .nav-link {
+  position: relative;
+
+  color: #ddd !important;
+
+  padding: 32px 0 !important;
+
+  transition: 0.3s;
+}
+
+/* Active + Hover */
+
+.raido-nav-links .nav-link:hover,
+.raido-nav-links .nav-link.active {
+  color: #f5a400 !important;
+}
+
+/* Underline */
+
+.raido-nav-links .nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #f5a400;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.raido-nav-links .nav-link:hover::after,
+.raido-nav-links .nav-link.active::after {
+  width: 100%;
+}
+
+/* Search */
+
+.search-icon {
+  color: white;
+
+  font-size: 20px;
+
+  text-decoration: none;
+}
+
+/* Hamburger */
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  width: 100%;
+}
+
+/* Left */
+
+.about-left {
+  position: relative;
+
+  background: white;
+
+  min-height: 700px;
+}
+
+/* Content */
+
+.about-content {
+  width: 100%;
+  max-width: 620px;
+
+  margin-left: auto;
+  margin-right: 40px;
+
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Heading */
+
+.about-content h1 {
+  margin: 0 0 35px;
+
+  font-size: 58px;
+  font-weight: 700;
+
+  color: #333;
+}
+
+/* Paragraph */
+
+.about-content p {
+  margin: 0;
+
+  max-width: 560px;
+
+  color: #777;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   STATS BOX
+========================================= */
+
+.stats-box {
+  position: relative;
+
+  z-index: 20;
+
+  width: 125%;
+
+  min-height: 150px;
+
+  margin-top: 50px;
+  margin-bottom: 45px;
+
+  background: #1d2230;
+
+  color: white;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Item */
+
+.stat-item {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 28px 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Divider */
+
+.stat-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 20%;
+
+  width: 1px;
+  height: 60%;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Number */
+
+.stat-item h2 {
+  margin: 0 0 10px;
+
+  font-size: 46px;
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+/* Label */
+
+.stat-item span {
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   READ MORE BUTTON
+========================================= */
+
+.read-more-btn {
+  width: 220px;
+  height: 60px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 28px;
+
+  background: #f5a400;
+
+  color: #222;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+  background: #e69a00;
+
+  color: #111;
+}
+
+/* Arrow */
+
+.read-more-btn .arrow {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+  font-size: 26px;
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.about-right {
+  min-height: 700px;
+}
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.slider {
+  position: relative;
+
+  width: 100%;
+  height: 700px;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+/* Slide */
+
+.slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+/* Image */
+
+.slide img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+/* =========================================
+   SLIDER DOTS
+========================================= */
+
+.slider-dots {
+  position: absolute;
+
+  z-index: 30;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* Dot */
+
+.dot {
+  width: 16px;
+  height: 16px;
+
+  padding: 0;
+
+  border: 2px solid white;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* =========================================
+   TABLET
+   < 992px
+========================================= */
+
+@media (max-width: 991.98px) {
+  /* Navbar */
+
+  .raido-navbar,
+  .raido-navbar .container {
+    min-height: 72px;
+  }
+
+  .raido-logo {
+    font-size: 25px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+
+    padding: 15px 0 20px;
+  }
+
+  .raido-nav-links {
+    gap: 0;
+  }
+
+  .raido-nav-links .nav-link {
+    padding: 10px 0 !important;
+  }
+
+  .raido-nav-links .nav-link::after {
+    display: none;
+  }
+
+  .search-icon {
+    display: inline-block;
+
+    margin-top: 8px;
+  }
+
+  /* About */
+
+  .about-left {
+    min-height: auto;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    padding: 55px 35px;
+  }
+
+  .about-content h1 {
+    font-size: 48px;
+
+    margin-bottom: 28px;
+  }
+
+  .about-content p {
+    max-width: 100%;
+
+    font-size: 14px;
+  }
+
+  /* Stats */
+
+  .stats-box {
+    width: 100%;
+
+    min-height: 120px;
+
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+
+  .stat-item {
+    padding: 22px 4px;
+  }
+
+  .stat-item h2 {
+    font-size: 34px;
+  }
+
+  .stat-item span {
+    font-size: 11px;
+  }
+
+  /* Button */
+
+  .read-more-btn {
+    width: 200px;
+    height: 55px;
+  }
+
+  .read-more-btn .arrow {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Image */
+
+  .about-right {
+    min-height: 450px;
+  }
+
+  .slider {
+    height: 450px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   < 576px
+========================================= */
+
+@media (max-width: 575.98px) {
+  /* Navbar */
+
+  .raido-navbar .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .raido-logo {
+    font-size: 23px;
+  }
+
+  /* About */
+
+  .about-content {
+    padding: 40px 18px;
+  }
+
+  .about-content h1 {
+    font-size: 38px;
+
+    margin-bottom: 22px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  /* Stats */
+
+  .stats-box {
+    width: 100%;
+
+    min-height: 100px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .stat-item {
+    padding: 18px 2px;
+  }
+
+  .stat-item h2 {
+    font-size: 24px;
+
+    margin-bottom: 7px;
+  }
+
+  .stat-item span {
+    font-size: 8.5px;
+
+    white-space: nowrap;
+  }
+
+  /* Button */
+
+  .read-more-btn {
+    width: 180px;
+    height: 50px;
+
+    padding-left: 20px;
+
+    font-size: 13px;
+  }
+
+  .read-more-btn .arrow {
+    width: 50px;
+    height: 50px;
+
+    font-size: 22px;
+  }
+
+  /* Slider */
+
+  .about-right {
+    min-height: 330px;
+  }
+
+  .slider {
+    height: 330px;
+  }
+
+  .slider-dots {
+    bottom: 18px;
+  }
+
+  .dot {
+    width: 13px;
+    height: 13px;
+  }
+}
